@@ -24,7 +24,7 @@
 - LDR
 - DHT11 Temperature & Humidity Sensor
 - Flame Sensor
-- Smoke Detector
+- Gas Sensor
 - IR Sensor
 - Rain Sensor
 - Motor
@@ -38,6 +38,15 @@
 **1. Keep Tracking Person Count**: We've kept track how many persons are in the home right now with 2 `IR Sensors`. One IR sensor is placed at outside the door and another one at inside the door. IF anyone enters or exits, person count is automatically updated.
 
 **2. Automated Light & Fan**: `LDR` has been used to automate the lights and `DHT11` has been used to automate the fan. When there is enough light in the house, the light is turned off automatically, and turned on otherwise. Measuring the temperature with DHT11, if the temperature is more than 28 degree celcius, the fan is turned on automatically, otherwise, it is turned off. <i>If there is nobody at home(person count=0), lights and fan are turned off.</i>
+
+**3. Automated Window:** The Window has been made automated using `servo motor` and a `rain sensor`.
+
+**4. Bluetooth Control:** All the appliances can be controlled with smartphone via Bluetooth. Lights, fan and window can be turned on or off using smartphone too, along with automation.
+
+### Secuirity
+**1. Fire & Gas Leakage Alert:** If there is an occurance of fire or gas leakage at home, there will be an automatic call at the owner's phone. `GSM 900A` has been used to implement this. `Flame Sensor` and `Gas Sensor` have been used to detect fire and gas leakage, respectively. <i>If there is a gas leakage, the window will get opened atomatically.</i>
+
+**2 Rain Alert:** If it is rainning outside, a message will be sent to the owner's phone via GSM.
 
 ---
 
